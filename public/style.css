@@ -702,149 +702,70 @@ button {
   word-wrap:break-word;
 }
 
+.rotate-message {
+ position: fixed;
+ flex-direction: column;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0rem;
+  font-size: 2.5rem;
+  z-index: 999999;
+  overflow: hidden;
+  box-sizing: border-box;     
+}
+
+.rotate-message-txt{
+  width: 40%;
+  max-width: 90%;
+  
+}
+.rotate-message img{
+  width: 20%;
+
+  margin-top: 1.5rem;
+}
 /* RESPONSIVE  */
 
-/* phone */
-@media (max-width: 600px){
 
-  body{
-    margin:0.5rem;
-    
-  }
-
-  .browser-window{
-    width: 100%;
-    margin: 1rem auto;
-    min-height: 75vh;
-  }
-
-  #intro-container{
-    padding: 1rem;
-    width: 100%;
-    min-height: auto;
-    font-size: 1.7rem;
-  }
-
-  #main-container{
-    padding: 1rem;
-    width:100%;
-    min-height: auto; 
-    font-size: 1rem;
-  }
-
-  .interactive-body{
-    padding:0.8rem;
-    font-size: 0.9rem;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .browser-content{
-    padding: 1rem;
-  }
-
-  .button-group{
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  button .button-group{
-    margin: 1rem;
-  }
-
-  .progress-bar{
-    flex-direction:column;
-    gap:1rem;
-  }
-
-  #likelihood-container{
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .likelihood-bar-wrapper{
-    width: 100%;
-}
-
-.likelihood-bar{
-  width:100%
-}
-  .stage-tag{
-    width: 25%;
-  }
-
-  .sliders-group{
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .slider-container{
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .slider{
-    width: 100%;
-  }
-
-  .slider-label{
-    text-align: left;
-    margin-bottom: 0.5rem;
-  }
-
-  button, .stage3-question, .finetuning-next, .finetuning-4-next{
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-    margin: 1rem auto;
-  }
-
-  .finetuning-question{
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
-
-  .finetuning-prompt{
-    font-size: 0.9rem;
-  }
-
-  .finetuning-responses{
-    flex-direction: column;
-  }
-
-  .finetuning-response{
-    width: 100%;
-  }
-
-  .finetuning-round-indicator{
-    width: 18%;
-  }
-  #stage3-chatbot-questions{
-    flex-direction:column;
-    gap: 0.5rem;
-  }
-
-  #stage3-chatbot-window{
-    padding: 1rem;
-    min-height: 15rem;
-    width: 95%; 
-  }
-
-  .stage3-chatbot-answer, .stage3-chatbot-user-msg{
-    max-width: 90%;
-    font-size: 0.9rem;
-  }
-
-  
-
-}
 
 /* tablets */
 
-@media (max-width: 900px){
+/* @media (max-width: 900px){
 
   .browser-window,#main-container, #intro-container{
     width:100%;
     max-width: 100%;
   }
 
+} */
+
+
+
+/* phone in portrait */
+@media screen and (orientation: portrait) and (max-width: 950px) {
+   body {
+    margin: 0;
+    overflow: hidden; 
+  }
+
+
+  .rotate-message {
+    display: flex;  
+    height: 100%;
+    width: 80%;
+  }
+
+    #intro-container,
+  .browser-window,
+  nav {
+    display: none;
+  }
 }
+
