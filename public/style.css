@@ -38,6 +38,11 @@ body {
   gap: 1rem;
 }
 
+.navbar-link:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   color: #333;

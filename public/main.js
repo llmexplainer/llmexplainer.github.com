@@ -71,10 +71,10 @@ async function loadScript() {
 function populateUI(UIData) {
   //def needs to be something more dynamic for ui...
   document.querySelector("#navbar-title").textContent = UIData.navbar.title;
-  document.querySelector("#navbar-resources").textContent =
+  document.querySelector("#navbar-resources a").textContent =
     UIData.navbar.resources;
-  document.querySelector("#navbar-about").textContent = UIData.navbar.about;
-  document.querySelector("#navbar-lang").textContent = UIData.navbar.language;
+  document.querySelector("#navbar-about a").textContent = UIData.navbar.about;
+  document.querySelector("#navbar-lang a").textContent = UIData.navbar.language;
 }
 
 function updateProgressBar(trigger) {
