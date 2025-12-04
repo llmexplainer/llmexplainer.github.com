@@ -613,6 +613,9 @@ button:hover {
   opacity: 0;
   visibility: hidden;
   transition: opacity 3s ease-in, visibility 3s linear 3s;
+  height: 9.4rem; 
+
+
 }
 
 #finetuning-4-generated-text-container.visible {
@@ -627,6 +630,9 @@ button:hover {
   padding: 0.5rem;
   width: 45%;
   font-size: 1rem;
+  height: 7.5rem;
+  overflow-y: auto;
+  text-align: left;
 }
 
 #stage3-chatbot {
@@ -979,7 +985,14 @@ button:hover {
   }
 
   #finetuning-4-generated-text-container{
-    margin-top: 0.7rem; 
+    margin-top: 0.4rem; 
+    height: 4rem;
+  }
+
+  #finetuning-4-generated-text{
+    height: 3.2rem;
+    width: 70%;
+    font-size: 0.9rem;
   }
 
   .finetuning-4-next{
