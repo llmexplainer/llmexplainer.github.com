@@ -339,7 +339,7 @@ function handleTrigger(trigger, extraData = null) {
     if (progressFill) progressFill.style.width = "0%";
     if(progressText) progressText.textContent = "0%";
     hideProgressBar();
-    renderStep(scriptByIndex[1]);
+    renderStep(scriptByIndex[2]);
     return;
   }
 
