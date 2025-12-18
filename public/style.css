@@ -1,5 +1,7 @@
 html {
   font-size: 16px; /* 1rem = 16px */
+  height: 100%;
+  overflow-y: hidden;
 }
 
 body {
@@ -52,20 +54,67 @@ a {
   text-decoration: none;
   color: #333;
 }
-button {
+
+
+ button {
+margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+
+/*     appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;*/
+
+
   margin: 3rem;
-  padding: 10px 20px;
+  padding: 15px 40px;
+  border-radius: 10px;
+  background: #610a27;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 6px 0 #350515, 0 5px 15px -4px #000;
+  color: #fff;
+  cursor: pointer;
+  font-family: roboto;
+
+  font-weight: 500;
+
+/*  height: 50px;*/
+  padding: 5px;
+/*  transition: box-shadow 0.2s ease-in-out, margin-top 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;*/
+
+  width: 6rem;
+  position: relative;
 }
 
-button:hover {
+
+ button:active {
+  box-shadow: 0 0 0 #350515, 0 2px 6px -4px #000;
+  top: 6px;
+}
+
+
+ button:hover, button:focus{
   cursor: pointer;
+  opacity: 0.9;
+  outline: 0;
+
 }
 
 .stage-btn {
-  background-color: rgb(207, 245, 233);
-  border-radius: 0.3rem;
+/*  background-color: rgb(207, 245, 233);*/
+  background-color: #096043;
+  box-shadow: 0 6px 0 #053525, 0 5px 15px -4px #000;
+/*  border-radius: 0.3rem;*/
   width: 35%;
-  margin: 1.5rem auto;
+/*  margin: 1.5rem auto;*/
+}
+
+.stage-btn:active {
+  box-shadow: 0 0 0 #053525, 0 2px 6px -4px #000;
+  top: 6px;
 }
 
 /* #start-btn {
@@ -74,14 +123,17 @@ button:hover {
 #intro-container {
   background-color: #fadede;
   padding: 3rem 5rem;
-  margin: 2rem auto;
+/*  margin-right: 2rem auto;*/
+margin-left: 12%;
+margin-top: 7%;
   font-size: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 60rem;
   max-width: 90%;
-  min-height: 30rem;
+  border-radius: 20px;
+/*  min-height: 30rem;*/
   transition: opacity 2s ease-in-out;
 }
 
@@ -92,13 +144,16 @@ button:hover {
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   background: #fff;
-  width: 90%;
-  max-width: 90%;
-  min-height: 80vh;
-  height: auto;
-  margin: 2rem auto;
-  overflow-y: auto;
-  padding-bottom: 2rem;
+  width: 70%;
+  max-width: 70%;
+/*  min-height: 60vh;*/
+height: 65vh;
+/*  height: auto;*/
+/*  margin: 5rem auto;*/
+margin-left: 15%;
+margin-top: 10%;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
 }
 
 .browser-content {
@@ -147,8 +202,8 @@ button:hover {
   flex-direction: column;
   align-items: center;
   width: 50rem;
-  max-width: 80%;
-  min-height: 35rem;
+  max-width: 90%;
+/*  min-height: 35rem;*/
   justify-content: center;
 }
 
@@ -196,10 +251,11 @@ button:hover {
   display: flex;
   /*  width: 100%;*/
   justify-content: center;
-  padding: 1rem;
+  padding: .5rem;
   align-items: center;
   gap: 15rem;
-  margin: 2rem;
+  padding: 1rem 1rem 0rem 1rem
+/*  margin: .25rem;*/
 }
 .spacer {
   width: 10%;
@@ -329,7 +385,7 @@ button:hover {
 
 .fade-in-delayed {
   opacity: 0;
-  animation: fadeIn 0.8s ease-out 0.2s forwards;
+  animation: fadeIn 1.2s ease-out 0.2s forwards;
 
 }
 
@@ -363,17 +419,20 @@ button:hover {
 }
 
 .button-choice {
+  box-shadow: none;
   border-radius: 8px;
-  border-style: solid;
+/*  border-style: solid;*/
   border-width: 2px;
   background-color: lightgrey;
   color: black;
   margin: 0.5rem;
   padding: 0.6rem 0.6rem;
+  font-weight: 300;
+  width: 20%;
 }
 
 .button-choice:hover {
-  background-color: lightgreen;
+  background-color: #6AEFB5;
   cursor: pointer;
 }
 
@@ -382,8 +441,17 @@ button:hover {
   color: white;
 }
 
+.button-choice:active {
+
+}
+
+ button:active {
+  box-shadow: none;
+  top: 0px;
+}
+
 .button-choice.selected {
-  background-color: lightgreen;
+  background-color: #6AEFB5;
   border-color: green;
 }
 
@@ -463,12 +531,12 @@ button:hover {
 #finetuning-step {
   background-color: #f2f2f2;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;
   align-items: center;
   justify-content: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
   width: 100%;
 }
 
@@ -503,13 +571,17 @@ button:hover {
 
 .finetuning-response {
   flex: 1;
-  background: white;
-  border: 2px solid transparent;
+  background: #F9EBBB;
+  color: black;
+/*  border: 2px solid transparent;*/
   border-radius: 12px;
   padding: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: left;
+  margin: .25rem;
+  box-shadow: none;
+  font-weight: 300;
 }
 
 .finetuning-response:hover {
@@ -517,28 +589,33 @@ button:hover {
 }
 
 .finetuning-response.selected {
-  background: #d1d7faff;
-  border-color: rgb(127, 146, 255);
+  background: #6AEFB5;
+/*  border-color: rgb(127, 146, 255);*/
 }
 
 .finetuning-next {
   margin-top: 1.5rem;
   padding: 0.8rem 2rem;
   border-radius: 10px;
-  background: #e0e0e0;
+/*  background: #e0e0e0;*/
+  opacity: .5;
   border: none;
   cursor: pointer;
   font-weight: 500;
   transition: all 0.2s ease;
+  width: 25%;
+  color:lightgrey;
 }
 
 .finetuning-next:enabled {
-  background: rgb(127, 146, 255);
-  color: white;
+  opacity: 1;
 }
 
 .finetuning-next:disabled {
   cursor: not-allowed;
+  opacity: .5;
+  box-shadow: 0 6px 0 #350515, 0 5px 15px -4px #000;
+
 }
 
 .finetuning-round-indicator {
@@ -564,6 +641,10 @@ button:hover {
   justify-content: center;
   padding: 0.5rem 0;
   box-sizing: border-box;
+}
+
+#feedback-btn {
+  width: 9rem !important;
 }
 
 .slider-container {
@@ -609,7 +690,7 @@ button:hover {
 }
 
 .finetuning-4-next {
-  width: 50%;
+  width: 30%;
   margin: 3rem auto;
   padding: 0.7rem;
 }
@@ -801,7 +882,9 @@ button:hover {
 
   body:not(.experience-started) #intro-container {
     padding: 2rem 1.5rem;
-    margin: 8rem 1rem;
+    margin-left: 12%;
+/*    margin-top: 10%;*/
+/*    margin: 8rem 1rem;*/
     font-size: 1.3rem;
     width: 90%;
     max-width: 90%;
@@ -853,11 +936,13 @@ button:hover {
   
   #intro-container {
     padding: 2rem 3rem;
-    margin: 7rem auto;
+/*    margin: 7rem auto;*/
+    margin-top: 17%;
     font-size: 1.6rem;
     width: 70%;
     max-width: 80%;
-    min-height: 25rem;
+/*    height: 10%;*/
+/*    min-height: 25rem;*/
     line-height: 1.5;
   }
 }
@@ -884,20 +969,21 @@ button:hover {
   }
 
   .browser-window {
+  background-size: cover;     
+  background-position: center;   
+  background-repeat: no-repeat;
+
     width: 95%;
     max-width: 95%;
     margin: 0.2rem auto;
     padding: 0rem;
-
-    background: #fff;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 
     min-height: auto;
 
-    background-size: cover;     
-  background-position: center;   
-  background-repeat: no-repeat;
+
+
   }
 
   .browser-content {
@@ -941,7 +1027,7 @@ button:hover {
     padding: 0.5rem 1.5rem;
     justify-content: center;
     flex: 1;
-    min-height: 15rem;
+/*    min-height: 15rem;*/
 
     display: flex;
     flex-direction: column;
@@ -967,11 +1053,12 @@ button:hover {
     margin: 0.5rem auto;
   }
 
-  button {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
+
+#data-next-button {
+  display: flex;
+  gap: 1rem;
+}
+
 
   .stage-tag {
     width: 20%;
@@ -1034,7 +1121,8 @@ button:hover {
   }
 
   .finetuning-responses {
-    flex-direction: column;
+/*    flex-direction: column;*/
+flex-direction: row;
     width: 90%;
     margin: 0rem;
     font-size: 0.85rem;
@@ -1042,6 +1130,7 @@ button:hover {
   }
 
   .finetuning-stage-btn{
+/*    margin-left: 30%;*/
     margin: 1rem auto; 
   }
 

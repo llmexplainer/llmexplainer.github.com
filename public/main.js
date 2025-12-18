@@ -196,6 +196,9 @@ function renderStep(step) {
 
             if(p.class.includes("stage-1-transition")) {
            browserWindow.style.backgroundImage = "url('../imgs/stage1.gif')";
+           browserWindow.style.backgroundSize = "cover";
+           browserWindow.style.backgroundPosition = "center";
+           browserWindow.style.removeProperty("background-color");
         }
 
           else if(p.class.includes("stage-2-transition")) {
