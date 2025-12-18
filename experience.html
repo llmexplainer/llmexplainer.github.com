@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Train Your Chatbot</title>
+    <link rel="stylesheet" href="public/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  </head>
+  <body>
+    <!-- MOVE ALL TEXT CONTENT TO JSON -->
+    
+
+    <div class="rotate-message" >
+      <p class="rotate-message-txt">  Please rotate your device to landscape</p>
+
+  <img src="imgs/rotatePhone.png" alt="">
+</div>
+   
+    <div class="browser-window">
+      <div class="browser-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <div class="url-bar">https://example.com</div>
+      </div>
+      <div id="progress-bar" class="progress-bar">
+        <div class="spacer"></div>
+
+        <div class="progress-bar-container">
+          <div id="progress-fill" class="progress-fill"></div>
+          <span id="progress-text" class="progress-text">0%</span>
+        </div>
+        <div class="stage-tag" id="stage-tag">Training</div>
+      </div>
+      <div class="browser-content" id="main-container">
+        <div id="generic-container"></div>
+        <!-- script steps happen here -->
+        <div
+          class="finetuning-container"
+          id="finetuning-container"
+          style="display: none"
+        >
+          <div id="finetuning-step">
+            <div class="finetuning-header">
+              <p id="finetuning-question" class="finetuning-question">tesst?</p>
+              <div
+                id="finetuning-round-indicator"
+                class="finetuning-round-indicator"
+              >
+                1/2
+              </div>
+            </div>
+
+            <p id="finetuning-prompt" class="finetuning-prompt">test</p>
+
+            <div id="finetuning-responses" class="finetuning-responses">
+              <button id="finetuning-response-1" class="finetuning-response">
+                test?
+              </button>
+              <button id="finetuning-response-2" class="finetuning-response">
+                test??
+              </button>
+            </div>
+
+            <button id="finetuning-next" class="finetuning-next" disabled>
+              test
+            </button>
+
+            <div
+              id="finetuning-error"
+              class="finetuning-error"
+              style="display: none"
+            ></div>
+          </div>
+        </div>
+        <div id="finetuning-step-4" style="display:none;">
+          
+          <div class="sliders-group">
+            <div class="slider-container">
+              <span class="slider-label" id="slider-label-1"></span>
+              <div class="slider" id="slider-1">
+                <div class="slider-fill" id="fill-1">
+                  <span class="slider-value" id="value"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-container">
+              <span class="slider-label" id="slider-label-2"></span>
+              <div class="slider" id="slider-2">
+                <div class="slider-fill" id="fill-2">
+                  <span class="slider-value" id="value"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-container">
+              <span class="slider-label" id="slider-label-3"></span>
+              <div class="slider" id="slider-3">
+                <div class="slider-fill" id="fill-3">
+                  <span class="slider-value" id="value"></span>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+           <button id="generate-txt-btn" class="finetuning-4-next"></button>
+           <div class="fade-in" id="finetuning-4-generated-text-container" >
+              <p class="generated-text fade-in" id="finetuning-4-generated-text" ></p>
+           </div>
+         
+        </div>
+        <!-- Need to move content to json -->
+        <div id="stage3-chatbot" style="display:none;">
+          <div id="stage3-chatbot-questions">
+            <button class="stage3-question"> </button>
+            <button class="stage3-question"></button>
+            <button class="stage3-question"> </button>
+          </div>
+          <div id="stage3-chatbot-window">
+            <div class="stage3-chatbot-answer" id="chatbot-intro-text"> </div>
+          </div>
+          <button class="stage-btn" id="stage3-chatbot-next"></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="public/dataHelpers.js"></script>
+    <script src="public/experience.js"></script>
+    <script src="public/sketch.js"></script>
+  </body>
+</html>
+
+<!-- style="display: none;" -->

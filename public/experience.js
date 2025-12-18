@@ -51,7 +51,7 @@ async function loadScript() {
     //entire script raw json
     scriptData = jsonData.script;
     UIData = jsonData.ui;
-    populateUI(UIData);
+    // populateUI(UIData);
 
     //sort into index and trigger steps
     for (let s of scriptData) {
@@ -65,20 +65,21 @@ async function loadScript() {
 
     console.log("1.", scriptByIndex, "\n2.", scriptByTrigger); //all good
 
-    renderStep(scriptByIndex[1]);
+    document.querySelector(".browser-window").style.visibility = "visible";
+    document.querySelector(".browser-window").style.display = "flex";
+
+    const mainContainer = document.getElementById("main-container");
+    mainContainer.style.visibility = "visible";
+    mainContainer.style.display = "flex";
+
+  document.body.classList.add("experience-started");
+
+    renderStep(scriptByIndex[2]);
   } catch (error) {
     console.error("Failed to load script:", error);
   }
 }
 
-function populateUI(UIData) {
-  //def needs to be something more dynamic for ui...
-  document.querySelector("#navbar-title").textContent = UIData.navbar.title;
-  document.querySelector("#navbar-resources a").textContent =
-    UIData.navbar.resources;
-  document.querySelector("#navbar-about a").textContent = UIData.navbar.about;
-  document.querySelector("#navbar-lang a").textContent = UIData.navbar.language;
-}
 
 function updateProgressBar(trigger) {
   const progressFill = document.getElementById("progress-fill");
@@ -120,29 +121,9 @@ function showStageTag() {
 function renderStep(step) {
   const mainContainer = document.getElementById("main-container");
   let genericContainer = document.getElementById("generic-container");
+  currentContainer = genericContainer; 
 
-  //start step, intro container
-  if (step.index === "1") {
-    document.querySelector(".navbar").style.display = "flex";
-    currentContainer = document.getElementById("intro-container");
-    currentContainer.style.display = "flex";
-    document.getElementById("main-container").style.display = "none";
-    hideProgressBar();
 
-    document.body.classList.remove("experience-started");
-  } else {
-    //browser styling made visible, navbar hidden
-    document.querySelector(".browser-window").style.visibility = "visible";
-    document.querySelector(".browser-window").style.display = "flex";
-    document.querySelector(".navbar").style.display = "none";
-    document.getElementById("intro-container").innerHTML = "";
-    document.getElementById("intro-container").style.display = "none";
-    currentContainer = genericContainer;
-    mainContainer.style.visibility = "visible";
-    mainContainer.style.display = "flex";
-
-    document.body.classList.add("experience-started");
-  }
 
   if (step.trigger && PROGRESS_MILESTONES.hasOwnProperty(step.trigger)) {
     showProgressBar();
@@ -351,61 +332,21 @@ function renderStep(step) {
 function handleTrigger(trigger, extraData = null) {
 
   if(trigger==="restart"){
-    userDataSelection=null;
-    userPersonality={
-      randomness:50,
-      friendliness:50,
-      wordiness:50,
+   window.location.href = "experience.html";
+   return;
     };
-    currentProgress =0;
 
-    const progressFill = document.getElementById("progress-fill");
-    const progressText = document.getElementById("progress-text");
+    const step = scriptByTrigger[trigger] || scriptByIndex[parseInt(trigger)];
 
-    document.querySelector(".browser-window").style.visibility = "hidden";
-    document.querySelector(".browser-window").style.display = "none";
-
-    if (progressFill) progressFill.style.width = "0%";
-    if(progressText) progressText.textContent = "0%";
-    hideProgressBar();
-    renderStep(scriptByIndex[2]);
-    return;
+    if (!step){
+      console.warn("no step found for trigger", trigger);
+      return;
+    }
+   renderStep(step);
   }
 
-  const step = scriptByTrigger[trigger] || scriptByIndex[parseInt(trigger)];
 
-  if (!step) {
-    console.warn("No step found for trigger:", trigger);
-    return;
-  }
 
-  
-  //to save training selection
-  // if (trigger === "choice-data" && extraData) {
-  //   if (extraData === "Data Type 1" || extraData === "Data Type 3") {
-  //     userDataSelection = 0;
-  //   } else if (extraData === "Data Type 2" || extraData === "Data Type 4") {
-  //     userDataSelection = 1;
-  //   }
-  //   console.log("User selected data type:", userDataSelection);
-  //   console.log(DATA_TYPES[userDataSelection].name);
-  // }
-
-  renderStep(step);
-}
-
-// function nextButtonForDataSelection() {
-//   const step = scriptByTrigger["stage-1"];
-//   const nextBtn = document.createElement("button");
-//     nextBtn.innerText = step.nextButton[0]["text"];
-//     nextBtn.classList.add(step.nextButton[0]["class"]);
-//     document.getElementById("main-container").appendChild(nextBtn);
-//     nextBtn.addEventListener("click", () => {
-//       handleTrigger(step.nextButton[0]["trigger"]);
-
-//     })
-
-// }
 
 function renderTrainingStep1(
   step,
