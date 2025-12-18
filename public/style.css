@@ -146,9 +146,9 @@ margin-top: 7%;
   background: #fff;
   width: 70%;
   max-width: 70%;
-/*  min-height: 60vh;*/
-height: 65vh;
-/*  height: auto;*/
+ min-height: 60vh;
+/* height: 65vh; */
+ height: auto;
 /*  margin: 5rem auto;*/
 margin-left: 15%;
 margin-top: 10%;
@@ -728,12 +728,13 @@ margin-top: 10%;
 #stage3-chatbot {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   width: 100%;
   align-items: center;
   max-height: 500px; /* ?? */
 }
+
 
 #stage3-chatbot-questions {
   display: flex;
@@ -775,12 +776,11 @@ margin-top: 10%;
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   background-color: #212121;
   gap: 1rem;
-  padding: 5rem;
+  padding: 1.5rem;
   border-radius: 10px;
-  width: 90%;
+  width: 97%;
   min-height: 20rem;
   color: white;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
@@ -806,6 +806,12 @@ margin-top: 10%;
   max-width: 75%;
   padding: 0.6rem 0.9rem;
   word-wrap: break-word;
+}
+
+#stage3-chatbot-next{
+  margin-top: 0.5rem;
+  align-self: center;
+  display: inline-block;
 }
 
 .rotate-message {

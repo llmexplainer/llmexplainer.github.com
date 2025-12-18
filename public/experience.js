@@ -580,11 +580,71 @@ function renderFineTuningStep4(step) {
   });
 }
 
-function renderStage3Chatbot(step) {
+// function renderStage3Chatbot(step) {
 
+//   browserWindow.style.backgroundImage = "none";
+//   const chatbotContainer = document.getElementById("stage3-chatbot");
+//   const questionContainer = document.getElementById("stage3-chatbot-questions");
+//   const chatWindow = document.getElementById("stage3-chatbot-window");
+
+//   chatbotContainer.style.display = "flex";
+
+//   const introMsg = document.getElementById("chatbot-intro-text");
+//   chatWindow.appendChild(introMsg);
+
+ 
+
+//   step.chatbotQuestions.forEach((qa, index) => {
+//     if (buttons[index]) {
+//       buttons[index].textContent = qa.question;
+
+//       buttons[index].addEventListener("click", () => {
+
+//         //disabling btn after click 
+//         buttons[index].disabled = true;
+//         buttons[index].style.opacity="0.5";
+//         buttons[index].style.cursor ="not-allowed";
+//         const userMsg = document.createElement("div");
+//         userMsg.classList.add("stage3-chatbot-user-msg");
+//         userMsg.classList.add("fade-in");
+//         userMsg.textContent = qa.question;
+//         chatWindow.appendChild(userMsg);
+
+//         const botMsg = document.createElement("div");
+//         botMsg.classList.add("stage3-chatbot-answer");
+//         chatWindow.appendChild(botMsg);
+
+//         const answer = getChatbotResponses(
+//           userDataSelection,
+//           userPersonality.randomness,
+//           userPersonality.friendliness,
+//           userPersonality.wordiness,
+//           index
+//         );
+
+//         setTimeout(() => {
+//           typewriterEffect(botMsg, answer, 40);
+//           chatWindow.scrollTop = chatWindow.scrollHeight;
+//         }, 500);
+//       });
+//     }
+//   });
+
+//   if (step.nextButton) {
+//     const nextBtn = document.getElementById("stage3-chatbot-next");
+//     nextBtn.textContent = step.nextButton[0]["text"];
+//     nextBtn.addEventListener("click", () => {
+//       chatbotContainer.style.display = "none";
+//       handleTrigger(step.nextButton[0]["trigger"]);
+//     });
+//   }
+// }
+
+
+
+function renderStage3Chatbot(step) {
   browserWindow.style.backgroundImage = "none";
   const chatbotContainer = document.getElementById("stage3-chatbot");
-  const questionContainer = document.getElementById("stage3-chatbot-questions");
   const chatWindow = document.getElementById("stage3-chatbot-window");
 
   chatbotContainer.style.display = "flex";
@@ -596,51 +656,118 @@ function renderStage3Chatbot(step) {
 
   const buttons = document.querySelectorAll(".stage3-question");
 
-  step.chatbotQuestions.forEach((qa, index) => {
-    if (buttons[index]) {
-      buttons[index].textContent = qa.question;
+  const usedQuestions = [0, 1, 2]; // track which questions are currently shown, fixed array - this is for grabbing and displaying the right qs 
 
-      buttons[index].addEventListener("click", () => {
+  //a growing set which tracks all used questions to avoid duplicates 
+  const allAskedQuestions = new Set([0,1,2]); 
+  let isTyping = false;
 
-        //disabling btn after click 
-        buttons[index].disabled = true;
-        buttons[index].style.opacity="0.5";
-        buttons[index].style.cursor ="not-allowed";
-        const userMsg = document.createElement("div");
-        userMsg.classList.add("stage3-chatbot-user-msg");
-        userMsg.classList.add("fade-in");
-        userMsg.textContent = qa.question;
-        chatWindow.appendChild(userMsg);
+  // load initial questions
+  buttons.forEach((button, index) => {
+    button.textContent = step.chatbotQuestions[index].question;
+  });
 
-        const botMsg = document.createElement("div");
-        botMsg.classList.add("stage3-chatbot-answer");
-        chatWindow.appendChild(botMsg);
+  // add click handlers
+  buttons.forEach((button, buttonIndex) => {
+    button.addEventListener("click", () => {
+      if (isTyping) return;
 
-        const answer = getChatbotResponses(
-          userDataSelection,
-          userPersonality.randomness,
-          userPersonality.friendliness,
-          userPersonality.wordiness,
-          index
-        );
+      const questionIndex = usedQuestions[buttonIndex];
+      console.log(" this is the question index: ", questionIndex);
+      console.log("this is the button index: ", buttonIndex);
+      const qa = step.chatbotQuestions[questionIndex];
+      console.log("this is what qa is: ", qa); 
+  
 
-        setTimeout(() => {
-          typewriterEffect(botMsg, answer, 40);
-          chatWindow.scrollTop = chatWindow.scrollHeight;
-        }, 500);
+      // disable all buttons while typing
+      isTyping = true;
+      buttons.forEach(btn => {
+        btn.disabled = true;
+        btn.style.opacity = "0.5";
+        btn.style.cursor = "not-allowed";
       });
-    }
+
+      // add user message
+      const userMsg = document.createElement("div");
+      userMsg.classList.add("stage3-chatbot-user-msg");
+      userMsg.classList.add("fade-in");
+      userMsg.textContent = qa.question;
+      chatWindow.appendChild(userMsg);
+
+      // add bot message
+      const botMsg = document.createElement("div");
+      botMsg.classList.add("stage3-chatbot-answer");
+      chatWindow.appendChild(botMsg);
+
+      const answer = getChatbotResponses(
+        userDataSelection,
+        userPersonality.randomness,
+        userPersonality.friendliness,
+        userPersonality.wordiness,
+        questionIndex
+      );
+
+      setTimeout(() => {
+        typewriterEffect(botMsg, answer, 40, () => {
+          isTyping = false;
+
+          // find next unused question, we use findIndex here bc users might click out of ordr
+          const nextQuestionIndex = step.chatbotQuestions.findIndex((_,i) => !allAskedQuestions.has(i));
+
+
+          // If there's a new question, replace this button
+          if (nextQuestionIndex !== -1) {
+            usedQuestions[buttonIndex] = nextQuestionIndex;
+
+            allAskedQuestions.add(nextQuestionIndex);
+            
+            // Fade out
+            button.style.transition = "opacity 0.3s";
+            button.style.opacity = "0";
+            
+            setTimeout(() => {
+              // Update text
+              button.textContent = step.chatbotQuestions[nextQuestionIndex].question;
+              button.disabled = false;
+              button.style.cursor = "pointer";
+              
+              // Fade in
+              button.style.opacity = "1";
+            }, 300);
+          } else {
+            // No more questions, hide this button
+            button.style.transition = "opacity 0.3s";
+            button.style.opacity = "0";
+            setTimeout(() => {
+              button.style.display = "none";
+            }, 300);
+          }
+
+          // Re-enable other buttons
+          buttons.forEach((btn, idx) => {
+            if (idx !== buttonIndex && btn.style.display !== "none") {
+              btn.disabled = false;
+              btn.style.opacity = "1";
+              btn.style.cursor = "pointer";
+            }
+          });
+        });
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }, 500);
+    });
   });
 
   if (step.nextButton) {
     const nextBtn = document.getElementById("stage3-chatbot-next");
     nextBtn.textContent = step.nextButton[0]["text"];
     nextBtn.addEventListener("click", () => {
+      console.log("i'm detecting the next click");
       chatbotContainer.style.display = "none";
       handleTrigger(step.nextButton[0]["trigger"]);
     });
   }
 }
+
 
 function typewriterEffect(element, text, speed = 50, callback) {
   element.textContent = "";

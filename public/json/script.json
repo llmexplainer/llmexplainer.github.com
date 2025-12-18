@@ -432,14 +432,20 @@
       },
       "chatbotQuestions": [
         {
-          "question": "What is artificial intelligence?",
-          "answer": "I was trained on lots of data to predict what words come next."
+          "question": "What is artificial intelligence?"
         },
         {
-          "question": "How do you stay motivated?",
-          "answer": "I really do recognize text patterns."
+          "question": "How do you stay motivated?"
         },
-        { "question": "What causes rainbows?", "answer": "I guess it might be!" }
+        { "question": "What causes rainbows?"
+      },
+      { "question": "question 4 placeholder?"
+      },
+      { "question": "question 5 placeholder?"
+      },
+      { "question": "question 6 placeholder?"
+      }
+
       ],
       "nextButton": [
         { "text": "Next", "trigger": "stage-3B", "class": ["stage-btn"] }
