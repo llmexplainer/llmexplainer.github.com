@@ -25,11 +25,36 @@ async function loadIntro() {
     const introStep = langData.script[0];
     const container = document.getElementById("intro-container");
     
-    introStep.body.forEach(b => {
-      const p = document.createElement("p");
-      p.textContent = b.text;
-      container.appendChild(p);
-    });
+    const intro_header = document.createElement("p");
+
+    intro_header.textContent = introStep.body[0].text;
+    intro_header.className = introStep.body[0].class;
+    container.appendChild(intro_header);
+
+    const intro_body = document.createElement("div");
+    intro_body.className = "intro_body";
+
+    const intro_img = document.createElement("img");
+    intro_img.src = "../imgs/stage3.gif";
+    intro_img.alt = "Add alt text";
+    intro_img.className = "intro_img";
+
+    const intro_para = document.createElement("p");
+    intro_para.textContent = introStep.body[1].text;
+    intro_para.className = introStep.body[1].class;
+
+    intro_body.appendChild(intro_img);
+    intro_body.appendChild(intro_para);
+
+    container.appendChild(intro_body);
+
+
+    // introStep.body.forEach(b => {
+    //   const p = document.createElement("p");
+    //   p.textContent = b.text;
+    //   p.className = b.class;
+    //   container.appendChild(p);
+    // });
     
     const startBtn = document.createElement("button");
     startBtn.textContent = introStep.buttons[0].text;

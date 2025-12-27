@@ -1,12 +1,12 @@
 {
   "en":{
   "comments": {
-    "what's going on": "honestly idk, but think of all the elements having a bunch of values corresponding to each key which specificy the content, additional classes, potential delay, and so on.",
-    "note": "pay attention to how classes are added, some are in arrays for example."
+    "what's going on": "All the elements having a bunch of values corresponding to each key which specificy the content, additional classes, potential delay, and so on.",
+    "note": "Pay attention to how classes are added, some are in arrays for example."
   },
 
   "ui": {
-    "_comment": "to separate static elements from script",
+    "_comment": "To separate static elements from script.",
 
     "navbar": {
       "title": "How to Train Your Chatbot",
@@ -27,11 +27,11 @@
         
         },
         {
-          "text": "Will change this design. In this brief playable explainer, go through the main stages of building a chat assistance like ChatGPT, Claude, or DeepSeek. From choosing what type of data it's trained on to what kind of tone it responds to questions in, learn what kinds of decisions go into the development of these technologies, and what capabilities and limitations they introduce.",
+          "text": "In this brief playable explainer, go through the main stages of building a conversational agent (like ChatGPT, Claude, or DeepSeek). From choosing what type of data it's trained on to what kind of tone it responds to questions in, learn what kinds of decisions go into the development of these technologies, what labour and resources are required behind the scenes, and what capabilities and limitations they introduce.",
           "class": ["intro-para"]
         }
       ],
-      "buttons": [{ "text": "START", "id": "start-btn", "trigger": "start" }]
+      "buttons": [{ "text": "START HERE", "id": "start-btn", "trigger": "start" }]
     },
 
     {
@@ -50,7 +50,7 @@
       ],
       "interactiveBody": [
         {
-          "text": " Autocomplete, for example, is a language model that predicts what word or phrase is most statistically likely to be used _____________",
+          "text": " Autocomplete, for example, is a language model that predicts what word or phrase is most statistically likely to be used ________",
           "animation": "typewriter",
           "speed": 50,
           "delay": 900
@@ -517,7 +517,7 @@
       ],
       "interactiveBody": [
         {
-          "text": " Autocomplete, for example, is a language model that predicts what word or phrase is most statistically likely to be used _____________",
+          "text": " Autocomplete, for example, is a language model that predicts what word or phrase is most statistically likely to be used ________",
           "animation": "typewriter",
           "speed": 50,
           "delay": 900
@@ -985,7 +985,7 @@
       ],
       "interactiveBody": [
         {
-          "text": " Autocomplete, for example, is a language model that predicts what word or phrase is most statistically likely to be used _____________",
+          "text": " Autocomplete, for example, is a language model that predicts what word or phrase is most statistically likely to be used ________",
           "animation": "typewriter",
           "speed": 50,
           "delay": 900
