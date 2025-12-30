@@ -1893,7 +1893,7 @@
     {
       "trigger": "stage-3B",
       "body":[{
-        "text": "You've trained your own chatbot! Now you know how AI chatbots are built from training to deployment."
+        "text": "[Placeholder for ending & debrief.] You've trained your own chatbot! Now you know how AI chatbots are built from training to deployment."
       }],
       "buttons":[
         {
