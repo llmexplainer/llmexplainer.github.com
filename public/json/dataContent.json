@@ -48,62 +48,62 @@
       },
       "chatbotResponses": {
         "h-h-h": [
-          "Ah, a fascinating inquiry indeed! Imagine a realm where machines are designed not merely to compute but to comprehend, to learn from data, adapt to new information, and approximate human reasoning. Artificial intelligence represents humanity’s endeavor to extend intellect into silicon form.",
+          "Ah, a fascinating inquiry indeed! Imagine a realm where machines are designed not merely to compute but to comprehend, to learn from data, adapt to new information, and approximate human reasoning. Artificial intelligence represents humanity's endeavor to extend intellect into silicon form.",
           "An excellent question—motivation is as much an art as a discipline. Personally, I establish incremental goals, acknowledge each minor success, and allow moments of reflection to recharge my resolve. Progress, however gradual, remains forward movement.",
-          "A captivating phenomenon indeed! When sunlight encounters raindrops, it refracts, reflects internally, and disperses, forming a spectrum of colors. Nature’s prism at work!",
-           "NEW: placeholder for question 4",
-           "NEW: placeholder for question 5",
-          "NEW: placeholder for  question 6"
+          "A captivating phenomenon indeed! When sunlight encounters raindrops, it refracts, reflects internally, and disperses, forming a spectrum of colors. Nature's prism at work!",
+          "What a wonderfully curious question! Dreams are the mind's theater—where our subconscious weaves memories, emotions, and sometimes utterly surreal imagery into narratives. Scientists believe they help consolidate learning and process emotions. Quite the nightly adventure!",
+          "Ah, storytelling—the oldest art form! A truly compelling story captures us through relatable characters, genuine stakes, and that irresistible pull of wanting to know what happens next. It's about emotional truth, not just plot twists!",
+          "Music is pure magic for the soul! It bypasses our logical brain entirely, triggering dopamine, evoking memories, and shifting our emotional state in seconds. A melody can make us weep or dance—what other art form has such immediate power?"
         ], 
         "h-h-l": [
-            "It’s when machines learn and adapt in ways similar to human thought—quite an extraordinary field!",
+            "It's when machines learn and adapt in ways similar to human thought—quite an extraordinary field!",
             "I set attainable goals and recognize achievements. It sustains momentum.",
             "Light bends and splits inside raindrops—quite beautiful!",
-          "NEW: placeholder for question 4",
-           "NEW: placeholder for question 5",
-          "NEW: placeholder for  question 6"],
+            "Dreams help our brains process the day—like a nightly reset button!",
+            "Great stories hook you with characters you care about and stakes that matter.",
+            "Music goes straight to our emotions—it can lift you up or bring tears instantly!"],
         "h-l-h": [
             "Artificial intelligence denotes the capacity of computational systems to exhibit adaptive, goal-oriented behavior akin to cognitive processes observed in human intelligence.",
             "Motivation arises from structured discipline—defined objectives, consistent effort, and minimal emotional interference.",
             "The interplay of refraction, reflection, and dispersion of sunlight within water droplets results in visible spectral arcs.",
-          "NEW: placeholder for question 4",
-           "NEW: placeholder for question 5",
-          "NEW: placeholder for  question 6"],
+            "Dreaming occurs during REM sleep and appears to serve multiple cognitive functions, including memory consolidation, emotional regulation, and problem-solving simulation.",
+            "Compelling narratives rely on structural tension, character development, and thematic resonance that connects with universal human experiences.",
+            "Music activates the limbic system, releasing neurochemicals that influence mood, memory retrieval, and physiological responses."],
         "h-l-l": [
             "The capability of machines to emulate aspects of human reasoning.",
             "Routine. Focus. Determination.",
             "Refraction and dispersion in rain.",
-          "NEW: placeholder for question 4",
-           "NEW: placeholder for question 5",
-          "NEW: placeholder for  question 6"],
+            "Brain processing during sleep.",
+            "Characters, conflict, resolution.",
+            "Neurochemical responses to sound."],
         "l-h-h": [
             "Artificial intelligence refers to the field of computer science concerned with creating systems capable of performing tasks that typically require human intelligence, such as perception, reasoning, and problem-solving. It continues to shape modern technology in remarkable ways.",
             "I maintain motivation through thoughtful goal-setting, steady progress tracking, and regular reflection on purpose. Balance and persistence are essential components of sustained drive.",
-            "Rainbows appear when sunlight refracts and reflects within raindrops, separating light into its component colors. It’s a simple yet elegant display of optics.",
-          "NEW: placeholder for question 4",
-           "NEW: placeholder for question 5",
-          "NEW: placeholder for  question 6"],
+            "Rainbows appear when sunlight refracts and reflects within raindrops, separating light into its component colors. It's a simple yet elegant display of optics.",
+            "Dreams are thought to help our minds process experiences, emotions, and information from waking life. While the exact purpose remains debated, many researchers believe dreaming supports memory and emotional well-being.",
+            "A compelling story draws us in through characters we connect with, challenges that feel meaningful, and resolutions that resonate. Good storytelling speaks to something universal in the human experience.",
+            "Music has a remarkable ability to influence our emotions by triggering responses in the brain's reward and emotional centers. It can calm, energize, or move us to tears—a powerful connection indeed."],
         "l-h-l": [
-            "It’s the design of computer systems that can learn, reason, and make decisions like people do.",
+            "It's the design of computer systems that can learn, reason, and make decisions like people do.",
             "I set clear goals and measure progress carefully. It keeps me steady.",
             "Sunlight bends in raindrops and splits into colors—so pretty!",
-          "NEW: placeholder for question 4",
-           "NEW: placeholder for question 5",
-          "NEW: placeholder for  question 6"],
+            "Dreams help us process memories and emotions while we rest.",
+            "Strong characters and meaningful stakes make stories resonate.",
+            "Music activates emotional centers in our brain—pretty amazing!"],
         "l-l-h": [
             "Artificial intelligence encompasses computational methods that simulate cognitive functions, enabling machines to analyze data, derive insights, and execute decisions autonomously.",
             "Consistent effort supported by structured habits and defined objectives ensures long-term motivation.",
             "Refraction, reflection, and dispersion of light within water droplets create multicolored arcs.",
-          "NEW: placeholder for question 4",
-           "NEW: placeholder for question 5",
-          "NEW: placeholder for  question 6"],
+            "Dreaming is a neurological phenomenon occurring primarily during REM sleep, theorized to facilitate memory consolidation, emotional processing, and cognitive maintenance.",
+            "Effective storytelling employs structural elements including character development, narrative tension, and thematic coherence to engage audiences meaningfully.",
+            "Musical stimuli activate neural pathways associated with emotion, memory, and reward, producing measurable psychological and physiological effects."],
         "l-l-l": [
             "The simulation of human intelligence by machines.",
             "Clear objectives and steady discipline.",
             "Light bends and splits in rain.",
-          "NEW: placeholder for question 4",
-           "NEW: placeholder for question 5",
-          "NEW: placeholder for  question 6"]
+            "Memory consolidation during sleep.",
+            "Structure, character, theme.",
+            "Neural activation from auditory stimuli."]
       }
     },
 
@@ -117,7 +117,7 @@
         },
         {
           "id": "sentence-1b",
-          "text": "She couldn’t believe the beauty of the"
+          "text": "She couldn't believe the beauty of the"
         },
         {
           "id": "sentence-1c",
@@ -143,49 +143,73 @@
         }
       },
       "personalitySlidersTxt": {
-        "h-h-h": "Hey there! So, funny story — the meeting didn’t end up happening today after all; it got pushed to tomorrow morning, which honestly might work out even better for everyone, right?",
-        "h-h-l": "Hey! The meeting’s bumped to tomorrow — surprise, but probably for the best!",
+        "h-h-h": "Hey there! So, funny story — the meeting didn't end up happening today after all; it got pushed to tomorrow morning, which honestly might work out even better for everyone, right?",
+        "h-h-l": "Hey! The meeting's bumped to tomorrow — surprise, but probably for the best!",
         "h-l-h": "The meeting, unexpectedly and somewhat inconveniently, was shifted to tomorrow without much notice, creating yet another scheduling disruption.",
         "h-l-l": "The meeting moved. Tomorrow now.",
-        "l-h-h": "Just a quick heads-up — the meeting has been rescheduled for tomorrow, so we’ll have a little more time to prepare and hopefully make it even more productive!",
-        "l-h-l": "Quick note: the meeting’s tomorrow instead!",
+        "l-h-h": "Just a quick heads-up — the meeting has been rescheduled for tomorrow, so we'll have a little more time to prepare and hopefully make it even more productive!",
+        "l-h-l": "Quick note: the meeting's tomorrow instead!",
         "l-l-h": "The meeting has been postponed until tomorrow in accordance with the revised schedule provided earlier today.",
         "l-l-l": "Meeting postponed to tomorrow."
       },
       "chatbotResponses": {
         "h-h-h": [
-          "Oh man, it’s like giving computers a brain! They can learn from stuff, make choices, and even guess what you want before you say it—like your phone predicting your texts or cars driving themselves. Kinda wild, huh?",
-          "That’s the big question, right? Hype yourself up with tiny goals, celebrate even silly wins, throw on your favorite tunes, and remind yourself that slow beats stuck. Gotta keep that spark alive!",
-          "It’s awesome! Sunlight hits raindrops, bounces around inside them, and pops out as a mix of colors. Basically, the sky’s throwing a color party!"
+          "Oh man, it's like giving computers a brain! They can learn from stuff, make choices, and even guess what you want before you say it—like your phone predicting your texts or cars driving themselves. Kinda wild, huh?",
+          "That's the big question, right? Hype yourself up with tiny goals, celebrate even silly wins, throw on your favorite tunes, and remind yourself that slow beats stuck. Gotta keep that spark alive!",
+          "It's awesome! Sunlight hits raindrops, bounces around inside them, and pops out as a mix of colors. Basically, the sky's throwing a color party!",
+          "Dude, dreams are like your brain's weird movie theater! While you're out cold, your mind replays stuff, works through feelings, and sometimes just goes totally random. It's like a nightly brain dump!",
+          "A killer story grabs you by the feels! You need characters you actually root for, stuff that actually matters, and that 'just one more chapter' vibe. It's all about making people CARE!",
+          "Music is basically emotional hacking! One song can make you cry, another gets you pumped for the gym. It hits your brain's feel-good buttons directly—total cheat code for feelings!"
         ], 
         "h-h-l": [
             "Basically, computers that can learn and think on their own. Pretty awesome!",
             "Set small goals and give yourself props. Works wonders!",
-            "Light bends in raindrops—boom, colors!"],
+            "Light bends in raindrops—boom, colors!",
+            "Your brain doing a nightly reboot—with weird movies!",
+            "Characters you love, stakes that matter. That's it!",
+            "Sound goes straight to the feels—instant mood changer!"],
         "h-l-h": [
-            "Machines trained to mimic human logic and problem-solving. Sounds fancy, but it’s math and data under the hood.",
+            "Machines trained to mimic human logic and problem-solving. Sounds fancy, but it's math and data under the hood.",
             "All about structure. No excuses, no drama—just get up and do the thing.",
-            "Light, droplets, angles. Physics doing its thing."],
+            "Light, droplets, angles. Physics doing its thing.",
+            "Dreams happen in REM sleep. The brain's sorting memories, dealing with emotions, running simulations.",
+            "Good stories work because of tension, character arcs, and themes that hit home. Structure matters.",
+            "Sound triggers chemical responses in the brain. Dopamine, cortisol, the works. That's why music hits different."],
         "h-l-l": [
             "Tech that copies human thinking.",
             "Routine. Focus. Go.",
-            "Light hits rain, splits up."],
+            "Light hits rain, splits up.",
+            "Brain maintenance at night.",
+            "Tension and payoff.",
+            "Chemicals from sound."],
         "l-h-h": [
-            "It’s when computers can figure things out like people do—learning, solving problems, and making choices based on what they’ve seen before. Super useful stuff!",
+            "It's when computers can figure things out like people do—learning, solving problems, and making choices based on what they've seen before. Super useful stuff!",
             "Try to keep things simple—set goals, track progress, and remind yourself why you started. Staying consistent makes all the difference.",
-            "Sunlight bends and reflects through raindrops, showing all the colors. Pretty cool, right?"],
+            "Sunlight bends and reflects through raindrops, showing all the colors. Pretty cool, right?",
+            "Dreams are super interesting! They seem to help your brain sort through the day's experiences and emotions. Pretty cool stuff happening while you sleep!",
+            "A great story makes you care about what happens! It's about creating characters that feel real and situations that matter. That's the magic.",
+            "Music is incredible at changing how we feel! It can pump you up, calm you down, or bring back old memories. There's real science behind it!"],
         "l-h-l": [
             "Computers that learn and solve problems. Easy as that!",
             "Set goals and keep tabs on your progress. It works for me!",
-            "Light bends through raindrops—simple and beautiful!"],
+            "Light bends through raindrops—simple and beautiful!",
+            "Brain's way of processing the day while you sleep!",
+            "Make people care about your characters. That's the secret!",
+            "Music triggers all sorts of brain chemistry—so powerful!"],
         "l-l-h": [
             "AI means teaching computers to learn patterns and make decisions instead of just following instructions.",
             "Stick to habits and goals that matter to you. The follow-through keeps you going.",
-            "Light gets split up inside raindrops, showing different colors."],
+            "Light gets split up inside raindrops, showing different colors.",
+            "During REM sleep, the brain engages in processes related to memory formation and emotional processing. Dreams may be part of that.",
+            "Narrative effectiveness depends on structural coherence, character investment, and thematic relevance to the audience.",
+            "Auditory processing of music engages multiple brain regions, influencing emotional state, memory recall, and arousal."],
         "l-l-l": [
             "Machines that can think a bit like us.",
-            "Goals and grit. That’s it.",
-            "Sunlight bends in rain."]
+            "Goals and grit. That's it.",
+            "Sunlight bends in rain.",
+            "Sleep-based brain processing.",
+            "Structure and stakes.",
+            "Brain chemistry from sound."]
       }
     }
   },
