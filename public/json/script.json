@@ -470,7 +470,7 @@
     ],
       "buttons":[
         {
-          "text":"Start Over",
+          "text":"Go to Prolific",
           "trigger":"restart",
           "class":["stage-btn"]
         }
@@ -950,7 +950,7 @@
     ],
       "buttons":[
         {
-          "text":"Start Over",
+          "text":"Go to Prolific",
           "trigger":"restart",
           "class":["stage-btn"]
         }
@@ -1433,7 +1433,7 @@
     ],
       "buttons":[
         {
-          "text":"Start Over",
+          "text":"Go to Prolific",
           "trigger":"restart",
           "class":["stage-btn"]
         }
@@ -1917,7 +1917,7 @@
     ],
       "buttons":[
         {
-          "text":"Start Over",
+          "text":"Go to Prolific",
           "trigger":"restart",
           "class":["stage-btn"]
         }
