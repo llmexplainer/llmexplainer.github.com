@@ -227,7 +227,7 @@
       ],
       "buttons": [
         {
-          "text": "Academic journals",
+          "text": "Academic papers",
           "trigger": "choice-data",
           "class": ["button-choice"],
           "dataValue": 0,
