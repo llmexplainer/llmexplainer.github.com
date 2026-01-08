@@ -435,7 +435,7 @@
           "text": "You can now interact with a chatbot that generates text based on your previous decisions, like your choice of training data or level of friendliness."
         },
         {
-          "text": "Now that you know how this technology is built, <b>explore what kinds of questions are appropriate to ask a language model.</b>"
+          "text": "Now that you know how this technology is built, <b>reflect on what kinds of questions are appropriate to ask a language model.</b>"
         }
       ],
       "buttons": [{"text": "Next", "class": ["stage-btn"], "id": ["try-btn"], "trigger": "stage-3A-chatbot"}]
