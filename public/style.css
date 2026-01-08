@@ -1146,7 +1146,7 @@ overflow-y: auto;*/*/
   }
 
 
-  #about-container {
+  #about-container, #resources-container {
   margin-top: 7rem;
   margin-left: 5%;
   width: 95%;
