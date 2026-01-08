@@ -1,6 +1,6 @@
 
 
-async function loadIntro() {
+async function loadPage() {
   let currentLanguage = localStorage.getItem('language') || 'en';
   try {
     const response = await fetch("public/json/script.json");
@@ -68,4 +68,4 @@ async function loadIntro() {
   }
 }
 
-window.addEventListener("DOMContentLoaded", loadIntro);
+window.addEventListener("DOMContentLoaded", loadPage);

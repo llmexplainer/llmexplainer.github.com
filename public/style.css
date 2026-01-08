@@ -1091,20 +1091,37 @@ width: 70%;
   width: 95%;
   margin-left: 2.5%;
 }
-  .intro-container, .page-container {
+  #intro-container {
     width: 80%;
     padding-bottom: 0;
-    margin-left: 0;
-    margin-right: 2.5%;
+    margin-left: 5%;
+/*    margin-right: 2.5%;*/
+    margin-top: 7rem;
 
   }
 
+/*  body:not(.experience-started) #intro-container{
+    padding: 1rem 1rem;
+    margin-left: 0%;
+padding-bottom: 0;
+    font-size: 1.3rem;
+    width: 80%;
+    max-width: 90%;
+    min-height: auto;
+    line-height: 1.5;
+  }*/
+
+.navbar {
+  margin-left: 0;
+}
     .page-container p, ul, li {
     font-size: 1rem;
   }
 
   .page-container {
     margin-top: 10%;
+    width: 80%;
+    margin-left: 0%;
   }
 
   body {
@@ -1115,14 +1132,25 @@ overflow-y: scroll
   }
 
   body:not(.experience-started) {
-    display: flex;
+/*    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 /*    min-height: 100vh;*/
-height: 100vh:;
-overflow-y: auto;
+/*height: 100vh:;
+overflow-y: auto;*/*/
+
+  display: block;
+/*  height: auto;*/
+
   }
+
+
+  #about-container {
+  margin-top: 7rem;
+  margin-left: 5%;
+  width: 95%;
+}
 
   body:not(.experience-started) .navbar {
     width: 100%;
@@ -1148,18 +1176,13 @@ top: 0;
     font-size: 0.9rem;
   }
 
-  body:not(.experience-started) #intro-container, .page-container {
-    padding: 1rem 1rem;
-    margin-left: 0%;
-/*    margin: 8rem 1rem;*/
-padding-bottom: 0;
-    font-size: 1.3rem;
-    width: 80%;
-    max-width: 90%;
-    min-height: auto;
-    line-height: 1.5;
-  }
 
+
+body:not(.experience-started) #page-container {
+  width: 90%;
+  margin-left: 2.5%;
+  min-height: auto;
+}
   body:not(.experience-started) #start-btn {
  
     padding: 0.8rem 2rem;
@@ -1193,9 +1216,9 @@ padding-bottom: 0;
   font-size: 1rem;
 }
 
-#intro-container, .page-container {
+/*#intro-container, .page-container {
   margin-top: 4rem;
-}
+}*/
 }
 
 
@@ -1233,6 +1256,9 @@ margin-left: 10%;
   }
 }
 
+-container {
+  margin-top: 10%;
+}
 
 #training-1-select {
   font-size: 1rem;
