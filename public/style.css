@@ -47,7 +47,7 @@ body {
   text-align: center;
   margin: 1.5rem;
 
-  background-image:linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,0),) url('../imgs/background.png');
+  background-image:linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,0)), url('../imgs/background.png');
 /*background-image: url('../imgs/background.png');*/
   background-size: cover;
   background-repeat: no-repeat;
