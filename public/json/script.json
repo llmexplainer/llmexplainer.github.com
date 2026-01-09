@@ -703,7 +703,7 @@
    {
       "trigger": "stage-1-loader",
       "body": [{ "text": "STAGE 1: TRAINING", "class": ["stage-1-transition"] }],
-      "timer": { "duration": 4000, "trigger": "stage-1" }
+      "timer": { "duration": 3000, "trigger": "stage-1" }
     },
     {
       "trigger": "stage-1",
@@ -842,7 +842,7 @@
     {
       "trigger": "finetuning-loader",
       "body": [{ "text": "STAGE 2: POST-TRAINING", "class": ["stage-2-transition"] }],
-      "timer": { "duration": 4000, "trigger": "finetuning-step-1" }
+      "timer": { "duration": 3000, "trigger": "finetuning-step-1" }
     },
 
     {
@@ -918,7 +918,7 @@
     {
       "trigger": "stage-3-loader",
       "body": [{ "text": "Stage 3: Try it out!", "class": ["stage-3-transition"]}],
-      "timer": { "duration": 7000, "trigger": "stage-3-intro" }
+      "timer": { "duration": 5000, "trigger": "stage-3-intro" }
     },
     {
       "trigger": "stage-3-intro",
