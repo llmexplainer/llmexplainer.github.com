@@ -1196,6 +1196,9 @@ width: 70%;
 /* phone in portrait */
 @media screen and (orientation: portrait) and (max-width: 1300px) {
 
+.transition-title {
+  margin-top: 25%;
+}
 .intro-header {
   display: none;
 }
@@ -1354,12 +1357,19 @@ body:not(.experience-started) #page-container {
   .navbar {
     font-size: 1rem;
     padding: 0.5rem 0.5rem 1.5rem 0rem;
+    margin-bottom: 0rem !important;
   }
 
   #navbar-title {
     font-size: 2rem;
     padding: 0 0.5rem;
   }
+
+  .transition-title {
+  margin-top: 25%;
+  font-family: 'Karrik';
+/*  color: white;*/
+}
 
   .navbar-link {
     padding: 0.5rem;
@@ -1410,6 +1420,12 @@ margin-left: 10%;
     background-image: none;
     background-color: black;
   }
+
+  .preloader {
+    top: 30%;
+  }
+
+ 
 
   .navbar {
     margin-right: 0;
@@ -1527,6 +1543,12 @@ margin-left: 10%;
   #main-container p {
     margin: 0.3rem 0rem;
   }
+
+  #main-container .transition-title p {
+  margin-top: 10% !important;
+  font-family: 'Karrik';
+/*  color: white;*/
+}
 
   .button-group {
     gap: 1rem;
@@ -1674,6 +1696,8 @@ flex-direction: row;
     max-height: none;
     gap: 0.5rem;
   }
+
+
   
 }
 
@@ -1686,6 +1710,9 @@ flex-direction: row;
     overflow-y: scroll;
   }
 
+  .navbar {
+    margin-bottom: 0rem !important;
+  }
 
 
   .button-stagger-1, .button-stagger-2, .button-stagger-3, .button-stagger-4 , button {
