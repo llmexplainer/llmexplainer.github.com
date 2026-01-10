@@ -553,19 +553,19 @@
           "text": "next",
           "trigger": "choice-next",
           "class": ["button-stagger-1"],
-          "delay": "7.0s"
+          "delay": "4.0s"
         },
         {
           "text": "now",
           "trigger": "choice-now",
           "class": ["button-stagger-2"],
-          "delay": "7.0s"
+          "delay": "4.0s"
         },
         {
           "text": "correctly",
           "trigger": "choice-correctly",
           "class": ["button-stagger-3"],
-          "delay": "7.0s"
+          "delay": "4.0s"
         }
       ],
       "__comment": "so triggers can also point to an indexed step"
